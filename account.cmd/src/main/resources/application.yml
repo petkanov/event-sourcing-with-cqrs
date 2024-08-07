@@ -1,0 +1,14 @@
+server:
+  port: 5000
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://admin:admin@localhost:27017/bankAccount?authSource=admin
+      authentication-database: admin
+      grid-fs-database: databaseName-gridfs
+  kafka:
+    producer:
+      bootstrap-servers: localhost:19092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
